@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Home.css"
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { HireContext } from '../App';
 
 
 
 // import video from "../images/video.mp4"
 
 function Home() {
-
+  const{setUsername} = useContext(HireContext)
   const navigate = useNavigate()
+
 
   //.....................useForm.........................//
   const {
@@ -19,14 +22,22 @@ function Home() {
     formState: { errors },
 } = useForm();
 
+//..........................useEfffect.............//
+
+useEffect(()=>{
+  setUsername(localStorage.getItem("userLatter"))
+},[])
+
+//.............................onclick function..........//
 
 function onSubmit(data) {
-    console.log(data);
+    // console.log(data);
 
     axios.post('http://localhost:8080/user', { data }, )
         .then((result) => {
             if (result.status === 200) {
-                console.log(result.data)
+              localStorage.setItem("userLatter" ,result.data.charAt(0).toUpperCase() )
+               
                 navigate("/category")
             }
             else if (result.status === 202) {
@@ -34,6 +45,7 @@ function onSubmit(data) {
             }
         });
 }
+
   return (
     <>
 

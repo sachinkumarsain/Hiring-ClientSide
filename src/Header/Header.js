@@ -1,9 +1,12 @@
 import React from 'react'
 import {Link } from "react-router-dom";
+import { useContext } from 'react';
+import { HireContext } from '../App';
 
 import "./Header.css"
 
 function Header() {
+  const{username } = useContext(HireContext)
   return (
   <>
   <header>
@@ -27,7 +30,10 @@ function Header() {
         <Link to="/admin">Admin</Link>
       </li>
       <li>
-        <Link to="">Sing Up</Link>
+        {
+          username!==0 ?<Link className='openPage' to="">{username}</Link> : <Link to="">Sing Up</Link>
+        }
+     
       </li>
     </ul>
   </header>

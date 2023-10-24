@@ -27,3 +27,10 @@ header ul li a{
     font-size: 18px;
     color: black;
 }
+
+.openPage{
+    padding: 8px 10px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(121, 115, 107);
+}
