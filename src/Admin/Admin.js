@@ -14,20 +14,24 @@ function Admin() {
     function onSubmit(data) {
         console.log(data);
 
-        // axios.post('http://localhost:8080/admin', { data })
-        //     .then((result) => {
-        //         if (result.status === 200) {
-        //             alert(result.data)
-        //         }
-        //         else if (result.status === 202) {
-        //             alert(result.data)
-        //         }
-        //     });
+        axios.post('http://localhost:8080/admin', { data }, 
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          }})
+            .then((result) => {
+                if (result.status === 200) {
+                    console.log(result.data)
+                }
+                else if (result.status === 202) {
+                    alert(result.data)
+                }
+            });
     }
     return (
         <>
             <section>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)} encType='multipart/form-data '>
                     <lebal>Full Name</lebal>
                     <input
                         {
@@ -35,6 +39,11 @@ function Admin() {
                         placeholder='Enter Full Name' type='text'></input>
 
                     {errors.fullname && <p role="alert">Fullname is required</p>}
+
+
+                    <lebal >Profile Pic</lebal>
+                    <input placeholder='Enter Linkedin Link' type='file'{
+                        ...register('profilePic', { required: true, })}></input>{errors.profilePic && <p role="alert">profilePic is required</p>}
 
 
                     <lebal>Certificate</lebal>
@@ -58,9 +67,9 @@ function Admin() {
                     <input placeholder=' Enter email' type="email" {
                         ...register('email', { required: true, })}></input>{errors.email && <p role="alert">email is required</p>}
 
-                    <lebal>Number</lebal>
+                    <lebal>mobile</lebal>
                     <input type='number' placeholder='Enter mobile number'{
-                        ...register('email', { required: true, })}></input>{errors.email && <p role="alert">address is required</p>}
+                        ...register('mobile', { required: true, })}></input>{errors.mobile && <p role="alert">mobile is required</p>}
 
 
                     <lebal>Address</lebal>
