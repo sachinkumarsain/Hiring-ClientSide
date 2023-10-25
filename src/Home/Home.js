@@ -31,10 +31,11 @@ useEffect(()=>{
 //.............................onclick function..........//
 
 function onSubmit(data) {
-    // console.log(data);
 
-    axios.post('http://localhost:8080/user', { data }, )
+
+    axios.post('http://localhost:8080/user', { data })
         .then((result) => {
+          console.log(result.data)
             if (result.status === 200) {
               localStorage.setItem("userLatter" ,result.data.charAt(0).toUpperCase() )
                

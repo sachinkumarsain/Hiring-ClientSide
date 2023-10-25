@@ -16,6 +16,7 @@ function Category() {
     axios.post('http://localhost:8080/category', { course })
       .then((result) => {
         if (result.status === 200) {
+          
           setCondedates(result.data);
         } else if (result.status === 202) {
           alert(result.data);

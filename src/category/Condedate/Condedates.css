@@ -1,0 +1,14 @@
+
+.condedates{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    flex-wrap: wrap;
+}
+.condedate{
+    border: 1px solid black;
+    width: 20%;
+    margin: 20px;
+    text-align: center;
+}
