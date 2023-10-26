@@ -9,6 +9,8 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Admin from "./Admin/Admin";
 import Condedates from "./category/Condedate/Condedates";
+import Login from "./UserForm/Login/Login";
+import Register from "./UserForm/Register/Register";
 
 export const HireContext = createContext({});
 
@@ -25,6 +27,8 @@ function App() {
           <Route path="/category" element={<Category />} />
           <Route path="/favourite" element={<Favourite />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/category/condedates" element={<Condedates />} />
         </Routes>
         <Footer />

@@ -30,10 +30,11 @@ function Header() {
         <Link to="/admin">Admin</Link>
       </li>
       <li>
-        {
-          username ?<Link className='openPage' to="">{username}</Link> : <Link to="">Sing Up</Link>
+        {/* {
+          username ?<Link className='openPage' to="">{username}</Link> : <Link to="/login">Sing Up</Link>
         }
-     
+      */}
+       <Link to="/login">Sing Up</Link>
       </li>
     </ul>
   </header>
