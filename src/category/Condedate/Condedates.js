@@ -1,10 +1,10 @@
 
-import React, { useContext, useEffect } from 'react';
+import React, { useContext,  } from 'react';
 import { HireContext } from '../../App';
 import "./Condedates.css"
 import axios from 'axios';
-import serverUrl from '../../serverUrl';
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+// import serverUrl from '../../serverUrl';
+// import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
@@ -15,7 +15,7 @@ function Condedates() {
  console.log(condedates)
   function handlelikedBook(e , condedateId){
     console.log(condedateId)
-    axios.patch('http://localhost:8080/LikeCondedate', { condedateId })
+    axios.patch('http://localhost:8080/LikeCondedate', { condedateId })  //#a090fe
     .then((result) => {
       if (result.status === 200) {
         
@@ -27,6 +27,9 @@ function Condedates() {
     });
   }
 
+  function hadleClick(){
+
+  }
   return (
     <>
       <section className='condedates'>
