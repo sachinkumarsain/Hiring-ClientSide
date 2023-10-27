@@ -1,19 +1,135 @@
-.home {
-    width: 100%;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.bannerAbout {
+.home{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  background-color: #FCF6F5;
+  
+}
+
+.left{
+    max-width: 50%;
     height: 100vh;
-    background: url(../images/video.mp4) no-repeat scroll center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+   
 }
-.videoTag{
 
+
+
+.left h1{
+    color: #2F3C7E;
+    font-size: 70px;
+    /* padding: 20px; */
+    width: 90%;
+  
+}
+
+.left  p{
+    font-size: 20px;
+    max-width: 90%;
+    display: flex;
+    align-items: start;
+    letter-spacing: 1px;
+    /* background-color: bisque; */
+}
+
+.right{
+    width: 50%;
+  
     height: 100%;
+
+}
+
+img{
     width: 100%;
-    float: left;
-    top: 0;
-    padding: none;
-    position: fixed; /* optional depending on what you want to do in your app */
+    height: 100%;
+}
+
+.allList{
+    width:100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+/* margin-top: 30px; */
+background-color: #FCF6F5;
+
+
+
+
+}
+
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
     
     
-    }
+  }
+
+
+  .image ,.image , .boostrap , .react  , .redux  , .express , .node , .mongo{
+    margin: 20px;
+
+  }
+  
+  .images {
+    width: 100px; 
+   
+    height: 100px;
+    margin-bottom: 10px; 
+  }
+
+
+  .image{
+    width:100px ;
+    height: 100px;
+  }
+
+  .boostrap{
+    width:130px ;
+    height: 100px;
+  }
+
+
+  .react{
+    width:150px ;
+    height: 100px;
+border-radius: 5px;
+  }
+
+  .redux{
+    width:80px ;
+    height: 80px;
+  }
+
+  .node{
+    width:110px ;
+    height: 100px;
+  }
+
+  .express{
+    width: 200px;
+    height: 60px;
+  }
+
+  .mongo{
+    width:160px ;
+    height: 150px;
+  }
+
