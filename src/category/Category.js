@@ -6,22 +6,28 @@ import { useNavigate } from 'react-router-dom';
 import { HireContext } from '../App';
 
 function Category() {
-  const { setCondedates, condedates } = useContext(HireContext);
+
+  const { setCondedates, jwttoken } = useContext(HireContext);
   const navigate = useNavigate();
   const [course, setCourse] = useState("");
 
+
+  //.........................categroy select..................
+
+
   function handleSubmit(e) {
     e.preventDefault();
-
-    axios.post('http://localhost:8080/category', { course })
+      console.log(jwttoken)
+    axios.post(`http://localhost:8080/category/${jwttoken}`, { course })
       .then((result) => {
         if (result.status === 200) {
           
           setCondedates(result.data);
+          // console.log(result.data)
         } else if (result.status === 202) {
           alert(result.data);
         }
-        navigate("/category/condedates");
+        navigate("/category/condedates"); 
       });
   }
 

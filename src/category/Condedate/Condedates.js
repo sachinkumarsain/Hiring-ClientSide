@@ -9,21 +9,21 @@ import serverUrl from '../../serverUrl';
 
 
 function Condedates() {
-  const { condedates , setCondedates} = useContext(HireContext);
+  const { condedates , setCondedates , jwttoken} = useContext(HireContext);
 
  console.log(condedates)
   function hadleClick(e , condedateId){
     console.log(condedateId)
-    // axios.patch('http://localhost:8080/LikeCondedate', { condedateId })
-    // .then((result) => {
-    //   if (result.status === 200) {
+    axios.patch(`http://localhost:8080/condedateShow/${jwttoken}`, { condedateId })
+    .then((result) => {
+      if (result.status === 200) {
         
-    //     console.log(result.data);
-    //   } else if (result.status === 202) {
-    //     alert(result.data);
-    //   }
+        console.log(result.data);
+      } else if (result.status === 202) {
+        alert(result.data);
+      }
       
-    // });
+    });
   }
 
   return (
