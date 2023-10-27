@@ -6,6 +6,15 @@ import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import images from './images.png'
 import { HireContext } from '../App';
+import html from './image/html.png'
+import css from './image/css.png'
+import javascript from './image/javascript.png'
+import bootstrap from './image/bootstrap.jpg'
+import react from './image/react.png'
+import redux from './image/redux.png'
+import nodes from './image/nodes.png'
+import express from './image/express.png'
+import mongo from './image/mongo.png'
 
 import gsap from 'gsap'
 
@@ -108,9 +117,27 @@ useEffect(()=>{
 
       <div className='right'>
       <img src={images}/>
+      
       </div>
+      
+
 
       </div>
+
+      <div className='allList'>
+
+<div className='image-container'>
+<img src={html} alt='img' className='images'/>
+<img src={css} alt='img' className='images'/>
+<img src={javascript} alt='img' className='images'/>
+<img src={bootstrap} alt='img' className='images'/>
+<img src={react} alt='img' className='images'/>
+<img src={redux} alt='img' className='images'/>
+<img src={nodes} alt='img' className='images'/>
+<img src={express} alt='img' className='images'/>
+<img src={mongo} alt='img' className='images'/>
+</div>
+</div>
     </>
   )
 }
