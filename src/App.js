@@ -11,6 +11,7 @@ import Admin from "./Admin/Admin";
 import Condedates from "./category/Condedate/Condedates";
 import Login from "./UserForm/Login/Login";
 import Register from "./UserForm/Register/Register";
+import Resume from "./category/Resume/Resume";
 
 export const HireContext = createContext({});
 
@@ -18,6 +19,7 @@ function App() {
   const[jwttoken , setJwttoken] = useState("")
   const [username, setUsername] = useState("");
   const [condedates, setCondedates] = useState([]);
+  const [ condedate , setCondedate] = useState({})
 
 
   useEffect(()=>{
@@ -29,7 +31,7 @@ function App() {
 
   return (
     <Router>
-      <HireContext.Provider value={{ username, setUsername, condedates, setCondedates ,jwttoken}}>
+      <HireContext.Provider value={{ condedate,setCondedate,username, setUsername, condedates, setCondedates ,jwttoken}}>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -39,6 +41,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/category/condedates" element={<Condedates />} />
+          <Route path="/category/resume" element={<Resume/>} />
+          
         </Routes>
         <Footer />
       </HireContext.Provider>

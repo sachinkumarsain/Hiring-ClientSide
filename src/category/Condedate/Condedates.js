@@ -4,12 +4,14 @@ import { HireContext } from '../../App';
 import "./Condedates.css"
 import axios from 'axios';
 import serverUrl from '../../serverUrl';
+import { useNavigate } from 'react-router-dom';
 // import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 // import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 function Condedates() {
-  const { condedates , setCondedates , jwttoken} = useContext(HireContext);
+  const navigate = useNavigate();
+  const { condedates , setCondedate , jwttoken} = useContext(HireContext);
 
  console.log(condedates)
   function hadleClick(e , condedateId){
@@ -18,7 +20,8 @@ function Condedates() {
     .then((result) => {
       if (result.status === 200) {
         
-        console.log(result.data);
+        setCondedate(result.data);
+        navigate("/category/resume")
       } else if (result.status === 202) {
         alert(result.data);
       }
