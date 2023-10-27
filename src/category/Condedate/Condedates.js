@@ -3,19 +3,18 @@ import React, { useContext,  } from 'react';
 import { HireContext } from '../../App';
 import "./Condedates.css"
 import axios from 'axios';
-// import serverUrl from '../../serverUrl';
+import serverUrl from '../../serverUrl';
 // import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import FavoriteIcon from '@mui/icons-material/Favorite';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 function Condedates() {
-  const { condedates , setCondedates} = useContext(HireContext);
-
+  const { condedates , setCondedates , jwttoken} = useContext(HireContext);
 
  console.log(condedates)
-  function handlelikedBook(e , condedateId){
+  function hadleClick(e , condedateId){
     console.log(condedateId)
-    axios.patch('http://localhost:8080/LikeCondedate', { condedateId })  //#a090fe
+    axios.patch('http://localhost:8080/LikeCondedate', { condedateId })
     .then((result) => {
       if (result.status === 200) {
         
@@ -40,9 +39,9 @@ function Condedates() {
             <p>{}</p>
             <button
                   className="heartBtn"
-                  onClick={(e) => handlelikedBook(e, condedate._id)} >
+                  >
                   {/* {(userLikedBooks.includes(book._id)) ? */}
-                   <FavoriteIcon sx={{ fontSize: 28 }} className="redHeartIcon" /> 
+                   {/* <FavoriteIcon sx={{ fontSize: 28 }} className="redHeartIcon" />  */}
                   {/* //  : <FavoriteBorderIcon sx={{ fontSize: 28 }} className="heartIcon" />} */}
                 </button>
           </div>
