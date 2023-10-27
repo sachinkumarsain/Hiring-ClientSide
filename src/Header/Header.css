@@ -6,26 +6,32 @@
 }
 header{
     width: 100%;
-    padding: 5px 30px;
+    /* padding: 8px 30px; */
+    background-color: #2F3C7E;
+    
 }
 header , header ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-   
+ justify-content: space-between;
+ padding: 12px 15px;
+ 
     list-style: none;
+    /* color: white; */
 }
 header h1 a{
     text-decoration: none;
     font-size: 35px;
+    color:  #FBEAEB;
 }
 header ul li {
     margin: 0px 10px;
 }
 header ul li a{
     text-decoration: none;
-    font-size: 18px;
-    color: black;
+    font-size: 22px;
+    color: #FBEAEB;
+    font-weight: 500;
 }
 
 .openPage{

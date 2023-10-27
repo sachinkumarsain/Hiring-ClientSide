@@ -1,5 +1,5 @@
 
-import React, { useContext, useEffect } from 'react';
+import React, { useContext,  } from 'react';
 import { HireContext } from '../../App';
 import "./Condedates.css"
 import axios from 'axios';
@@ -16,7 +16,7 @@ function Condedates() {
  console.log(condedates)
   function hadleClick(e , condedateId){
     console.log(condedateId)
-    axios.patch(`http://localhost:8080/condedateShow/${jwttoken}`, { condedateId })
+    axios.patch('http://localhost:8080/LikeCondedate', { condedateId })
     .then((result) => {
       if (result.status === 200) {
         
@@ -29,6 +29,9 @@ function Condedates() {
     });
   }
 
+  function hadleClick(){
+
+  }
   return (
     <>
       <section className='condedates'>
