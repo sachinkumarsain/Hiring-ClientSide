@@ -76,22 +76,8 @@ function Admin() {
                         ...register('profilePic', { required: true, })}></input>{errors.profilePic && <p role="alert">profilePic is required</p>}
 
 
-                    <lebal>Certificate</lebal>
-                    {/* 
-                     <select
-                        {
-                        ...register('course', { required: true, })}
-                    >
-                        <option>Select Game</option>
-                        <option>Full Stack developer</option>
-                        <option>Frontend</option>
-                        <option>Backend</option>
-                        <option>UI design</option>
-                        <option>UX design</option>
-                    </select>
-
-
-                    // {errors.course && <p role="alert">course is required</p>}  */}
+            
+                   
                     <lebal>Select feild</lebal>
                     <ul style={{ listStyle: "none" }}
 
