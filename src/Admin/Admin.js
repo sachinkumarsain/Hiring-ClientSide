@@ -158,49 +158,49 @@ function Admin() {
                     <h2>Education</h2>
                     <h3>Graduation</h3>
                     <lebal>StartYear</lebal>
-                    <input {...register('graStartYear', { required: true, })} type='text' placeholder='Enter Graduation  start year'></input>
+                    <input {...register('graStartYear', { required: true, })} type='text' placeholder='Enter Graduation  start year'></input>{errors.graStartYear && <p role="alert">Graduation StartYear is required</p>}
 
                     <lebal>LastYear</lebal>
-                    <input {...register('graLastYear', { required: true, })} type='text' placeholder='Enter Graduation  last year'></input>
+                    <input {...register('graLastYear', { required: true, })} type='text' placeholder='Enter Graduation  last year'></input>{errors.graLastYear && <p role="alert">Graduation LastYear is required</p>}
 
                     <lebal>Location</lebal>
-                    <input {...register('graLocation', { required: true, })} type='text' placeholder='Enter Location'></input>
+                    <input {...register('graLocation', { required: true, })} type='text' placeholder='Enter Location'></input>{errors.graLocation && <p role="alert">Graduation Location is required</p>}
 
                     <lebal>Degree</lebal>
-                    <input {...register('graDegree', { required: true, })} type='text' placeholder='Enter Graduation Degree'></input>
+                    <input {...register('graDegree', { required: true, })} type='text' placeholder='Enter Graduation Degree'></input>{errors.graDegree && <p role="alert">Graduation Degree is required</p>}
 
                     <lebal>University</lebal>
-                    <input {...register('university', { required: true, })} type='text' placeholder='Enter University Name'></input>
+                    <input {...register('university', { required: true, })} type='text' placeholder='Enter University Name'></input>{errors.university && <p role="alert">Graduation University is required</p>}
 
                     <lebal>Description</lebal>
-                    <input {...register('graDec', { required: true, })} type='text' placeholder='Enter  description'></input>
+                    <input {...register('graDec', { required: true, })} type='text' placeholder='Enter  description'></input>{errors.graDec && <p role="alert">Graduation Description is required</p>}
 
                     <lebal>Skills</lebal>
-                    <input {...register('graSkills', { required: true, })} type='text' placeholder='Enter Skills'></input>
+                    <input {...register('graSkills', { required: true, })} type='text' placeholder='Enter Skills'></input>{errors.graSkills && <p role="alert">Graduation Skills is required</p>}
 
 
                     {/* ....................................Intership................................... */}
                     <h2>Intership</h2>
                     <lebal>StartTime</lebal>
-                    <input {...register('intStartTime', { required: true, })} type='text' placeholder='Enter  Start time'></input>
+                    <input {...register('intStartTime', { required: true, })} type='text' placeholder='Enter  Start time'></input>{errors.intStartTime && <p role="alert">Intership StartTime is required</p>}
 
                     <lebal>complete Time</lebal>
-                    <input {...register('intComplete', { required: true, })} type='text' placeholder='Enter complete time'></input>
+                    <input {...register('intComplete', { required: true, })} type='text' placeholder='Enter complete time'></input>{errors.intComplete && <p role="alert">Intership complete time is required</p>}
 
                     <lebal>Location</lebal>
-                    <input {...register('intLocation', { required: true, })} type='text' placeholder='Enter Location'></input>
+                    <input {...register('intLocation', { required: true, })} type='text' placeholder='Enter Location'></input>{errors.intLocation&& <p role="alert">Intership Location is required</p>}
 
                     <lebal>Degree</lebal>
-                    <input {...register('intDegree', { required: true, })} type='text' placeholder='Enter  Degree'></input>
+                    <input {...register('intDegree', { required: true, })} type='text' placeholder='Enter  Degree'></input>{errors.intDegree && <p role="alert">Intership Degree is required</p>}
 
                     <lebal>Institute</lebal>
-                    <input {...register('institute', { required: true, })} type='text' placeholder='Enter Institute Name'></input>
+                    <input {...register('institute', { required: true, })} type='text' placeholder='Enter Institute Name'></input>{errors.institute && <p role="alert">Intership Institute is required</p>}
 
                     <lebal>Description</lebal>
-                    <input {...register('intDec', { required: true, })} type='text' placeholder='Enter  description'></input>
+                    <input {...register('intDec', { required: true, })} type='text' placeholder='Enter  description'></input>{errors.intDec && <p role="alert">Intership Description is required</p>}
 
                     <lebal>Skills</lebal>
-                    <input {...register('intSkills', { required: true, })} type='text' placeholder='Enter Skills'></input>
+                    <input {...register('intSkills', { required: true, })} type='text' placeholder='Enter Skills'></input>{errors.intSkills && <p role="alert">Intership Skills is required</p>}
 
 
                     {/* .....................................Skills................................ */}
