@@ -1,6 +1,7 @@
-import React,{useEffect}  from 'react'
-import images from './images.png'
+import React, { useEffect } from 'react'
+// import git from './image/git.gif'
 // import { HireContext } from '../App';
+import banner from './image/banner.png'
 import html from './image/html.png'
 import css from './image/css.png'
 import javascript from './image/javascript.png'
@@ -12,6 +13,7 @@ import express from './image/express.png'
 import mongo from './image/mongo.png'
 import gsap from 'gsap'
 import "./Home.css"
+import {Link} from 'react-router-dom'
 
 
 
@@ -21,29 +23,29 @@ function Home() {
 
 
   //.....................useForm.........................//
-//   const {
-//     register,
-//     handleSubmit,
-//     formState: { errors },
-// } = useForm();
+  //   const {
+  //     register,
+  //     handleSubmit,
+  //     formState: { errors },
+  // } = useForm();
 
-//..........................useEfffect.............//
+  //..........................useEfffect.............//
 
-// useEffect(()=>{
-//   setUsername(localStorage.getItem("userLatter"))
-// },[])
+  // useEffect(()=>{
+  //   setUsername(localStorage.getItem("userLatter"))
+  // },[])
 
-//.............................onclick function..........//
+  //.............................onclick function..........//
 
 
 
-useEffect(()=>{
-  gsap.to('.right',{
-    duration:1,
-    scale:0.8,
-    stagger:0.3
-  })
-},[])
+  useEffect(() => {
+    gsap.to('.right', {
+      duration: 1,
+      scale: 0.8,
+      stagger: 0.3
+    })
+  }, [])
 
   return (
     <>
@@ -68,37 +70,39 @@ useEffect(()=>{
           </form>
         </section> */}
 
-<div className='left'>
-  {/* <img  className='fsl' src={fsl}/> */}
-        <h1>Shaping your  company's future with best recruitment. </h1>
-        <p> Post your job listings, access a vast pool of talent, and streamline your hiring process with ease. Your next ideal candidate is just a click away. Join us and find the perfect fit for your organization.</p>
-      </div>
+        <div className='left'>
+          {/* <img  className='fsl' src={fsl}/> */}
+          <h1>Shaping your  company's future with best recruitment. </h1>
+          <p> Post your job listings, access a vast pool of talent, and streamline your hiring process with ease. Your next ideal candidate is just a click away. Join us and find the perfect fit for your organization.</p>
 
-      <div className='right'>
-      <img src={images}/>
+          <Link to = '/category'>Hire Candidate</Link>
+        </div>
 
-      </div>
+        <div className='right'>
+          <img src={banner} />
+
+        </div>
 
 
 
       </div>
 
       <div className='allList'>
+<p>Trusted by 10,000 recruitment team with multiple language</p>
+        <div className='image-container'>
+          <img src={html} alt='img' className='images' />
+          <img src={css} alt='img' className='image' />
+          <img src={javascript} alt='img' className='image' />
+          <img src={bootstrap} alt='img' className='boostrap' />
+          <img src={react} alt='img' className='react' />
+          <img src={redux} alt='img' className='redux' />
+          <img src={nodes} alt='img' className='node' />
+          <img src={express} alt='img' className='express' />
+          <img src={mongo} alt='img' className='mongo' />
+        </div>
+      </div>
 
-<div className='image-container'>
-<img src={html} alt='img' className='images'/>
-<img src={css} alt='img' className='image'/>
-<img src={javascript} alt='img' className='image'/>
-<img src={bootstrap} alt='img' className='boostrap'/>
-<img src={react} alt='img' className='react'/>
-<img src={redux} alt='img' className='redux'/>
-<img src={nodes} alt='img' className='node'/>
-<img src={express} alt='img' className='express'/>
-<img src={mongo} alt='img' className='mongo'/>
-</div>
-</div>
 
-      
     </>
   )
 }
