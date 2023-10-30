@@ -1,9 +1,12 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,Link } from 'react-router-dom';
 // import { useContext } from 'react';
 // import { HireContext } from '../../App';
+import './Login.css'
+import password from '../../Home/image/password.png'
+
 
 
 function Login() {
@@ -35,19 +38,22 @@ function Login() {
             });
     }
 
-    function moveRegister(){
-        navigate("/register")
-    }
+    
     
       return (
         <>
     
-          <section className='home'>
-            <section className='login'>
-            
+          <section className='log'>
+            <div className='homeContent'>
+<div className='loginImage'>
+<img  src={password}/>
+</div>
+
+            <div className='login'>
+            <h1>Welcome To Full Stack Learning</h1>
               <form onSubmit={handleSubmit(onSubmit)}>
-  
-                <label>Username</label>
+ 
+                <label>UserName</label>
                 <input placeholder='Enter username' type='text'
                 {
                   ...register('username', { required: true, })}></input>
@@ -60,9 +66,12 @@ function Login() {
                 {errors.password && <p role="alert">password is required</p>}
     
                 <button type='submit'>Submit</button>
+                <p>Don't Have Account ? <Link to='/register' > Create Account</Link></p>
               </form>
-              <button onClick={moveRegister} >Create Account</button>
-            </section>
+             
+              
+            </div>
+            </div>
           </section>
         </>
       )

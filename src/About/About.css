@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);  
+ }
+.AboutFirst , .AboutThird{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+ 
+      
+}
+
+.leftFirst , .leftThird{
+    width: 40%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+   justify-content: center;
+   align-items: center;
+  
+}
+
+.leftFirst .Aboutimage , .leftThird .AboutThird{
+    width: 600px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.leftFirst img , .leftThird img{
+   width: 100%;
+   height: 100%; 
+}
+
+.rightFirst , .rightThird{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    margin: 20px;
+    /* background-color: red; */
+}
+
+.rightFirst h1 , .rightThird h1 {
+    font-size: 40px;
+    margin-bottom:30px ;
+    width: 500px;
+
+}
+
+.rightFirst p  , .rightThird p {
+   font-size: 18px;
+   margin-bottom:25px ;
+   width: 500px;
+ 
+}
+
+.rightFirst li , .rightThird li {
+    list-style: none;
+    font-size: 18px;
+    margin-bottom:30px ;
+    width: 500px;
+    
+}
+
+.rightFirst ul li span  , .rightThird  ul li span{
+    font-size: 25px;
+    font-weight: 700;
+    
+    
+    
+}
+
+
+.AboutSecond , .AboutFourth{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+
+}
+
+.rightSecond , .rightFourth{
+    width: 40%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+   justify-content: center;
+   align-items: center;
+  
+}
+
+.rightSecond .Aboutimage1 , .rightFourth .Aboutimage2{
+    width: 600px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+.rightSecond img , .rightFourth{
+   width: 100%;
+   height: 100%; 
+}
+
+.leftSecond , .leftFourth{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    margin: 20px;
+    /* background-color: red; */
+}
+
+.leftSecond h1 , .leftFourth h1{
+    font-size: 40px;
+    margin-bottom:30px ;
+    width: 500px;
+}
+
+.leftSecond p  , .leftFourth p {
+   font-size: 18px;
+   margin-bottom:25px ;
+   width: 500px;
+ 
+}
+
+.leftSecond li , .leftFourth li {
+    list-style: none;
+    font-size: 18px;
+    margin-bottom:30px ;
+    width: 500px;
+    
+}
+
+.leftSecond ul li span  .leftFourth ul li span{
+    font-size: 25px;
+    font-weight: 700;
+    
+    
+    
+}
+
+
+

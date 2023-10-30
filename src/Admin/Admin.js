@@ -43,7 +43,7 @@ function Admin() {
     function onSubmit(data) {
         console.log(data);
 
-        axios.post('http://localhost:8080/admin', { data, oneTank },
+        axios.post('http://localhost:8080/admin', { ...data, oneTank },
             {
                 headers: {
                     'Content-Type': 'multipart/form-data',
@@ -76,9 +76,7 @@ function Admin() {
                         ...register('profilePic', { required: true, })}></input>{errors.profilePic && <p role="alert">profilePic is required</p>}
 
 
-            
-                   
-                    <lebal>Select feild</lebal>
+                    {/* <lebal>Select feild</lebal>
                     <ul style={{ listStyle: "none" }}
 
 
@@ -132,7 +130,7 @@ function Admin() {
 
                     {/* ...........................Profile(summary)............................. */}
 
-                    <lebal>Enter summary</lebal>
+                    {/* <lebal>Enter summary</lebal>
                     <textarea type="text"{
                         ...register('summary', { required: true, })}></textarea>{errors.summary && <p role="alert">summary is required</p>}
 
@@ -141,7 +139,7 @@ function Admin() {
 
                     {/* ..........................Education................................... */}
 
-                    <h2>Education</h2>
+                    {/* <h2>Education</h2>
                     <h3>Graduation</h3>
                     <lebal>StartYear</lebal>
                     <input {...register('graStartYear', { required: true, })} type='text' placeholder='Enter Graduation  start year'></input>{errors.graStartYear && <p role="alert">Graduation StartYear is required</p>}
@@ -162,11 +160,11 @@ function Admin() {
                     <input {...register('graDec', { required: true, })} type='text' placeholder='Enter  description'></input>{errors.graDec && <p role="alert">Graduation Description is required</p>}
 
                     <lebal>Skills</lebal>
-                    <input {...register('graSkills', { required: true, })} type='text' placeholder='Enter Skills'></input>{errors.graSkills && <p role="alert">Graduation Skills is required</p>}
+                    <input {...register('graSkills', { required: true, })} type='text' placeholder='Enter Skills'></input>{errors.graSkills && <p role="alert">Graduation Skills is required</p>} */}
 
 
                     {/* ....................................Intership................................... */}
-                    <h2>Intership</h2>
+                    {/* <h2>Intership</h2>
                     <lebal>StartTime</lebal>
                     <input {...register('intStartTime', { required: true, })} type='text' placeholder='Enter  Start time'></input>{errors.intStartTime && <p role="alert">Intership StartTime is required</p>}
 
@@ -186,11 +184,10 @@ function Admin() {
                     <input {...register('intDec', { required: true, })} type='text' placeholder='Enter  description'></input>{errors.intDec && <p role="alert">Intership Description is required</p>}
 
                     <lebal>Skills</lebal>
-                    <input {...register('intSkills', { required: true, })} type='text' placeholder='Enter Skills'></input>{errors.intSkills && <p role="alert">Intership Skills is required</p>}
-
-
+                    <input {...register('intSkills', { required: true, })} type='text' placeholder='Enter Skills'></input>{errors.intSkills && <p role="alert">Intership Skills is required</p>} */}
+ 
                     {/* .....................................Skills................................ */}
-                    <h2>Skills</h2>
+                    {/* <h2>Skills</h2>
 
                     <lebal>Skills</lebal>
 
@@ -200,7 +197,9 @@ function Admin() {
                     <h2>Lanuages</h2>
                     <lebal>Lanuages</lebal>
                     <input placeholder='Enter lanuages'{
-                        ...register('lanuages', { required: true, })}></input>{errors.lanuages && <p role="alert"> lanuages is required</p>}
+                        ...register('lanuages', { required: true, })}></input>{errors.lanuages && <p role="alert"> lanuages is required</p>} 
+             */}
+                   
 
                     <button type='submit'> submit</button>
 

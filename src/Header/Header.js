@@ -34,7 +34,7 @@ function Header() {
           username ?<Link className='openPage' to="">{username}</Link> : <Link to="/login">Sing Up</Link>
         }
       */}
-       <Link to="/login">Sing Up</Link>
+       <Link to="/login">Sign Up</Link>
       </li>
     </ul>
   </header>
