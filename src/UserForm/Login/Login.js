@@ -4,6 +4,9 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 // import { useContext } from 'react';
 // import { HireContext } from '../../App';
+import './Login.css'
+import password from '../../Home/image/password.png'
+
 
 
 function Login() {
@@ -42,11 +45,16 @@ function Login() {
       return (
         <>
     
-          <section className='home'>
-            <section className='login'>
-            
+          <section className='log'>
+            <div className='homeContent'>
+<div className='loginImage'>
+<img  src={password}/>
+</div>
+
+            <div className='login'>
+            <h1>Welcome To Full Stack Learning</h1>
               <form onSubmit={handleSubmit(onSubmit)}>
-  
+ 
                 <label>Username</label>
                 <input placeholder='Enter username' type='text'
                 {
@@ -62,7 +70,9 @@ function Login() {
                 <button type='submit'>Submit</button>
               </form>
               <button onClick={moveRegister} >Create Account</button>
-            </section>
+              
+            </div>
+            </div>
           </section>
         </>
       )
