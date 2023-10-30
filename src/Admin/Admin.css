@@ -14,6 +14,8 @@
 .admin form input , .admin form lebal ,.admin form textarea {
     width: 45%;
     margin: 5px;
+    /* width: 45%;
+    margin: 5px; */
     font-size: 18px;
 }
 
