@@ -11,6 +11,7 @@ function Resume() {
         <section>
           <h1>{condedate.fullname}</h1>
           <h2>{condedate.course}</h2>
+          <p></p>
         </section>
     </div>
     </>
