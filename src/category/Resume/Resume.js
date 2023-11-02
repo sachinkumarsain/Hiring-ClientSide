@@ -14,6 +14,7 @@ function Resume() {
           <div className='social'>
               <button className='whatshap'>Whatshap</button>
               <button className='gmail'>Gmail</button>
+              <button className='phone'> Phone</button>
           </div>
         </section>
     </div>
