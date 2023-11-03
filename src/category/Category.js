@@ -23,7 +23,7 @@ function Category() {
 
   //.....................Aos effect...................//
 
-  useEffect(()=>{
+  useEffect(() => {
     AOS.init();
   }, [])
 
@@ -32,17 +32,17 @@ function Category() {
 
   function handleSubmit(e) {
     e.preventDefault();
-      console.log(jwttoken)
+    console.log(jwttoken)
     axios.post(`http://localhost:8080/category/${jwttoken}`, { course })
       .then((result) => {
         if (result.status === 200) {
-          
+
           setCondedates(result.data);
           // console.log(result.data)
         } else if (result.status === 202) {
           alert(result.data);
         }
-        navigate("/category/condedates"); 
+        navigate("/category/condedates");
       });
   }
 
@@ -50,53 +50,53 @@ function Category() {
     <>
 
 
-    <div className='category'>
-      <div className='categoryImage'>
-<img src={git}/>
+      <div className='category'>
+        <div className='categoryImage'>
+          <img src={git} />
 
-      </div>
-   <div className='categoryForm' data-aos="zoom-in"
-    data-aos-offset="200"
-    data-aos-delay="70"
-    data-aos-duration="2000"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="true"
-    data-aos-anchor-placement="top-center">
-    {/* <h1>Ready to find the perfect addition to your team?</h1> */}
-    <h3>
-    <Typewriter options={{
-          autoStart :true,
-          loop:true,
-          delay:50
-        }}
-        
-        onInit = {(content)=>{
-          content
-          .typeString("Ready to find the perfect addition to your team?")
-          .pauseFor(1000)
-          .deleteAll()
-          
-          .start()
-        }}
-/>
-</h3>
-<h1>SkillMagnet</h1>
-    <p>Click the category that best suits your hiring needs to get started.</p>
-      <section className='categorySection'>
-        <form onSubmit={handleSubmit}>
-          <select defaultValue={course} onChange={(e) => setCourse(e.target.value)}>
-            <option  value={course} disabled >Select Category </option>
-            <option className='options'>Full Stack Learning</option>
-            <option>Frontend</option>
-            <option>Backend</option>
-            <option>UI design</option>
-            <option>UX design</option>
-          </select>
-          <button type='submit'>Show Condedate</button>
-        </form>
-      </section>
-      </div>
+        </div>
+        <div className='categoryForm' data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-delay="70"
+          data-aos-duration="2000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center">
+          {/* <h1>Ready to find the perfect addition to your team?</h1> */}
+          <h3>
+            <Typewriter options={{
+              autoStart: true,
+              loop: true,
+              delay: 50
+            }}
+
+              onInit={(content) => {
+                content
+                  .typeString("Ready to find the perfect addition to your team?")
+                  .pauseFor(1000)
+                  .deleteAll()
+
+                  .start()
+              }}
+            />
+          </h3>
+          <h1>SkillMagnet</h1>
+          <p>Click the category that best suits your hiring needs to get started.</p>
+          <section className='categorySection'>
+            <form  onSubmit={handleSubmit}>
+              <select defaultValue={course} onChange={(e) => setCourse(e.target.value)}>
+                <option value={course} disabled >Select Category </option>
+                <option className='options'>Full Stack Learning</option>
+                <option>Frontend</option>
+                <option>Backend</option>
+                <option>UI design</option>
+                <option>UX design</option>
+              </select>
+              <button type='submit'>Show Condedate</button>
+            </form>
+          </section>
+        </div>
       </div>
     </>
   );

@@ -22,7 +22,7 @@ body {
 }
 
 .left{
-    max-width: 40%;
+    width: 43%;
     /* height: 100vh; */
     height: 100%;
     display: flex;
@@ -37,19 +37,21 @@ body {
 
 .left h1{
     color: #2F3C7E;
-    font-size: 55px;
+    font-size: 45px;
     /* padding: 20px; */
     width: 90%;
+    /* text-align: justify; */
     margin-bottom: 20px;
   
 }
 
 .left  p{
 
-    font-size: 22px;
+    font-size: 20px;
     width: 90%;
     display: flex;
     align-items: start;
+    text-align: justify;
   
     /* background-color: bisque; */
 }
@@ -88,17 +90,20 @@ body {
     align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
-/* margin-top: 30px; */
 
 
 }
 
 .allList p {
-  font-size: 24px;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  margin: 15px 0px;
 }
 
 .image-container {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center; 
     align-items: center; 
@@ -109,52 +114,51 @@ body {
 
 
   .image ,.image , .boostrap , .react  , .redux  , .express , .node , .mongo{
-    margin: 20px;
+    margin: 10px;
 
   }
   
   .images {
-    width: 100px; 
-   
-    height: 100px;
+    width: 90px; 
+    height: 90px;
     margin-bottom: 10px; 
   }
 
 
   .image{
-    width:100px ;
-    height: 100px;
+    width:90px;
+    height: 90px;
   }
 
   .boostrap{
-    width:130px ;
-    height: 100px;
+    width:110px ;
+    height: 90px;
   }
 
 
   .react{
-    width:150px ;
-    height: 100px;
+    width:130px ;
+    height: 90px;
 border-radius: 5px;
   }
 
   .redux{
-    width:80px ;
-    height: 80px;
+    width:70px ;
+    height: 90px;
   }
 
   .node{
-    width:110px ;
-    height: 100px;
+    width:100px ;
+    height: 90px;
   }
 
   .express{
-    width: 200px;
-    height: 60px;
+    width: 180px;
+    height: 50px;
   }
 
   .mongo{
     width:160px ;
-    height: 150px;
+    height: 140px;
   }
 
