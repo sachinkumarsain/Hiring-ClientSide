@@ -29,7 +29,7 @@ header ul li {
 }
 header ul li a{
     text-decoration: none;
-    font-size: 22px;
+    font-size: 21px;
     color: #FBEAEB;
     font-weight: 500;
 }
@@ -40,3 +40,5 @@ header ul li a{
     color: white;
     background-color: rgb(121, 115, 107);
 }
+
+ 
